@@ -1,0 +1,9 @@
+name: Practice CI
+on: [push]
+jobs:
+  hello:
+    runs-on: windows-latest
+    steps:
+      - name: PrintMessage
+        run: echo "Helo"
+ 
