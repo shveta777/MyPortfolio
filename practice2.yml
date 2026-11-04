@@ -1,9 +1,14 @@
 name: Practice CI
 on: [push]
 jobs:
-  hello:
+  build:
     runs-on: windows-latest
     steps:
-      - name: PrintMessage
-        run: echo "Helo"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        witn:
+          dotnet-version: '9.0.x'
  
